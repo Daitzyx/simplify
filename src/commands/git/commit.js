@@ -13,9 +13,6 @@ import {
 } from "../../prompts/gitPrompt.js";
 import { chooseCommitType } from "../../prompts/commitPrompt.js";
 import { updateStatus } from "../../utils/helper.js";
-// import ora from "ora";
-
-// const spinner = ora().start();
 
 export async function handleGitCommit() {
   const commitChanges = await checkForUncommittedChanges();
@@ -35,9 +32,6 @@ export async function handleGitCommit() {
   }
 
   if (filesWithChanges.length === 1) {
-    // updateStatus(
-    //   chalk.green("Only one file changed. Adding directly to staged..."),
-    // );
     // spinner.stop("Only one file changed. Adding directly to staged...");
     await addFilesToStage(filesWithChanges);
     await performCommit();
