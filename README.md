@@ -7,7 +7,7 @@ A Simplify é uma CLI para simplificar os comandos Git mais comuns como add, com
 Instruções sobre como instalar sua CLI via npm. Por exemplo:
 
 ```bash
-npm install -g nome-da-sua-cli
+npm install -g simplify
 ```
 
 ## Instrução de uso
