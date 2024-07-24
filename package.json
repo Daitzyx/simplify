@@ -1,5 +1,5 @@
 {
-  "name": "simplify",
+  "name": "cli-simplify",
   "version": "1.0.0",
   "description": "Simplify command with our CLI",
   "main": "src/cli.js",
