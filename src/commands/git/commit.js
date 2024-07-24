@@ -13,9 +13,6 @@ import {
 } from "../../prompts/gitPrompt.js";
 import { chooseCommitType } from "../../prompts/commitPrompt.js";
 import { updateStatus } from "../../utils/helper.js";
-// import ora from "ora";
-
-// const spinner = ora().start();
 
 export async function handleGitCommit() {
   const commitChanges = await checkForUncommittedChanges();
