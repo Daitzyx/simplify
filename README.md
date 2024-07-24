@@ -18,11 +18,17 @@ Para usar a Simplify, basta abrir o terminal e digitar "simplify git". Você ser
 simplify git
 ```
 
-1.Commit: Faça um commit com a opção de adicionar uma mensagem personalizada(Seguindo padrão de commit).
-2.Pull: Atualize seu repositório local com as alterações do repositório remoto.
-3.Push: Envie suas mudanças locais para o repositório remoto (Faz um Pull automaticamente antes de qualquer Push).
-4.Commit & Push: Faz um commit e imediatamente faz um push das alterações (Faz um Pull automaticamente antes de qualquer Push).
-5.Switch Branch: Lista as Branchs disponíveis e ao escolher é feito o switch para essa branch
+ou
+
+```bash
+simp git
+```
+
+1.Commit: Faça um commit com a opção de adicionar uma mensagem personalizada(Seguindo padrão de commit).<br/>
+2.Pull: Atualize seu repositório local com as alterações do repositório remoto.<br/>
+3.Push: Envie suas mudanças locais para o repositório remoto (Faz um Pull automaticamente antes de qualquer Push).<br/>
+4.Commit & Push: Faz um commit e imediatamente faz um push das alterações (Faz um Pull automaticamente antes de qualquer Push).<br/>
+5.Switch Branch: Lista as Branchs disponíveis e ao escolher é feito o switch para essa branch.<br/>
 
 ## Contribuições
 
