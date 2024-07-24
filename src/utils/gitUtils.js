@@ -62,7 +62,6 @@ export async function execPromisify(command, options = {}) {
   return new Promise((resolve, reject) => {
     exec(command, finalOptions, (error, stdout, stderr) => {
       if (error) {
-        // console.error(`Command failed: ${command}`, error);
         reject(
           new Error(
             `Error executing '${command}': ${error.message}, Stderr: ${stderr}`,
@@ -117,7 +116,6 @@ export async function checkIfBranchIsUpToDate() {
       console.log(chalk.green("Branch is up to date with remote."));
       return true;
     } else {
-      // console.log(chalk.yellow("Local branch is not up to date with remote."));
       return false;
     }
   } catch (error) {
