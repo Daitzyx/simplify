@@ -32,9 +32,6 @@ export async function handleGitCommit() {
   }
 
   if (filesWithChanges.length === 1) {
-    // updateStatus(
-    //   chalk.green("Only one file changed. Adding directly to staged..."),
-    // );
     // spinner.stop("Only one file changed. Adding directly to staged...");
     await addFilesToStage(filesWithChanges);
     await performCommit();
