@@ -1,0 +1,58 @@
+{
+  "testCases": [
+    {
+      "scenario": "Commit Simples com Modificações Locais",
+      "command": "simplify commit -m \"Modificação local\"",
+      "setup": "Modificar um arquivo localmente",
+      "expectedOutput": "Commit realizado com sucesso: Modificação local"
+    },
+    {
+      "scenario": "Nenhuma Modificação Local Pendente",
+      "command": "simplify commit -m \"Nenhuma modificação\"",
+      "setup": "Certificar-se de que não há mudanças pendentes no repositório",
+      "expectedOutput": "Nenhuma mudança para comitar"
+    },
+    {
+      "scenario": "Commit com Mensagem Vazia",
+      "command": "simplify commit -m \"\"",
+      "setup": "Modificar um arquivo localmente",
+      "expectedOutput": "Erro: Necessário fornecer uma mensagem para o commit"
+    },
+    {
+      "scenario": "Commit de Arquivos Específicos",
+      "command": "simplify commit -m \"Atualização específica\" arquivo_especifico.txt",
+      "setup": "Modificar arquivo_especifico.txt",
+      "expectedOutput": "Commit realizado com sucesso: Atualização específica"
+    },
+    {
+      "scenario": "Commit com Mensagem Padrão",
+      "command": "simplify commit",
+      "setup": "Modificar um arquivo localmente",
+      "expectedOutput": "Commit realizado com sucesso: Commit automático"
+    },
+    {
+      "scenario": "Commit com Arquivos Não Rastreados",
+      "command": "simplify commit -m \"Adicionar novofile.txt\" novofile.txt",
+      "setup": "Criar um novo arquivo novofile.txt",
+      "expectedOutput": "Commit realizado com sucesso: Adicionar novofile.txt"
+    },
+    {
+      "scenario": "Commit com Arquivos Ignorados",
+      "command": "simplify commit -m \"Tentativa de comitar arquivo ignorado\"",
+      "setup": "Modificar um arquivo que está listado no .gitignore",
+      "expectedOutput": "Erro: Arquivo está listado no .gitignore e não pode ser comitado"
+    },
+    {
+      "scenario": "Commit com Conflitos",
+      "command": "simplify commit -m \"Tentativa de commit com conflitos\"",
+      "setup": "Criar uma situação de conflito de merge",
+      "expectedOutput": "Erro: Conflitos de merge não resolvidos"
+    },
+    {
+      "scenario": "Commit com Arquivos Grandes",
+      "command": "simplify commit -m \"Adicionar arquivo grande\"",
+      "setup": "Adicionar um arquivo muito grande ao repositório",
+      "expectedOutput": "Erro: Arquivo muito grande para ser comitado"
+    }
+  ]
+}
