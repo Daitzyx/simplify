@@ -22,14 +22,6 @@ export async function handleGitPush() {
       return;
     }
 
-    const hasPermission = await checkPermissions();
-    if (!hasPermission) {
-      console.error(
-        chalk.red("You do not have permission to push to this repository."),
-      );
-      return;
-    }
-
     updateStatus("Checking for uncommitted changes...");
     if (await checkForUncommittedChanges()) {
       console.error(
