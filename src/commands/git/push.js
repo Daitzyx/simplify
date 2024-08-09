@@ -4,7 +4,6 @@ import {
   checkIfBranchIsUpToDate,
   checkForStagedChanges,
   execPromisify,
-  checkPermissions,
 } from "../../utils/gitUtils.js";
 import { executingPull } from "./pull.js";
 import { updateStatus } from "../../utils/helper.js";
