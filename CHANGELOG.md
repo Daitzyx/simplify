@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Daitzyx/simplify/compare/v1.0.1...v1.1.0) (2024-08-09)
+
+
+### Features
+
+* adding function to configure git user ([8423460](https://github.com/Daitzyx/simplify/commit/84234603d2d4be6e60f3d4a1116f1b801b774822))
+
 ## [1.0.1](https://github.com/Daitzyx/simplify/compare/v1.0.0...v1.0.1) (2024-08-02)
 
 
