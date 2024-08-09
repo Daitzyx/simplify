@@ -56,7 +56,9 @@ export function validateRemoteRepository() {
 }
 
 export function validateEnvironment(commandName) {
-  if (commandName !== "user") {
+  const commandNoNeedUser = "user"
+
+  if (commandName !== commandNoNeedUser) {
     validateRemoteRepository();
     validateGitUserConfig();
   }
