@@ -1,7 +1,9 @@
+import { validateEnvironment } from "../../validation/gitvalidation.js";
 import { handleGitSwitchBranch } from "./branch.js";
 import { handleGitCommit } from "./commit.js";
 import { handleGitPull } from "./pull.js";
 import { handleGitPush } from "./push.js";
+import { handleGitConfig, handleGitUserConfig, handleGitUserList } from "./userConfig.js";
 
 export function setupGitShortcuts(program) {
   program
@@ -9,6 +11,7 @@ export function setupGitShortcuts(program) {
     .aliases(["commit"])
     .description("Record changes to the repository")
     .action((options) => {
+      validateEnvironment("commit");
       handleGitCommit(options.message);
     });
 
@@ -19,6 +22,7 @@ export function setupGitShortcuts(program) {
       "Fetch from and integrate with another repository or a local branch",
     )
     .action(() => {
+      validateEnvironment("pull");
       handleGitPull();
     });
 
@@ -27,6 +31,7 @@ export function setupGitShortcuts(program) {
     .aliases(["push"])
     .description("Pull changes from remote & Update to remote the news")
     .action(() => {
+      validateEnvironment("push");
       handleGitPush();
     });
 
@@ -37,6 +42,7 @@ export function setupGitShortcuts(program) {
       "Record changes to the repository and push them to a remote repository",
     )
     .action(async (options) => {
+      validateEnvironment("commit-push");
       await handleGitCommit(options.message);
       await handleGitPush();
     });
@@ -46,6 +52,22 @@ export function setupGitShortcuts(program) {
     .aliases(["switch-branch"])
     .description("Switch branches or restore working tree files")
     .action(() => {
+      validateEnvironment("switch-branch");
       handleGitSwitchBranch();
+    });
+
+  program
+    .command("user")
+    .description("Configure or list git user")
+    .option("--list", "List current git user configuration")
+    .option("--conf", "Configure new git user")
+    .action((options) => {
+      if (options.list) {
+        handleGitUserList();
+      } else if (options.conf) {
+        handleGitUserConfig();
+      } else {
+        handleGitConfig();
+      }
     });
 }
