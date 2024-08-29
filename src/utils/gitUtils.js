@@ -207,3 +207,13 @@ export async function checkPermissions() {
     }
   }
 }
+
+export function getCurrentBranch() {
+  const branch = execSync('git branch --show-current').toString().trim();
+  return branch;
+}
+
+
+export function checkBranchProtection(branch, protectedBranches) {
+  return protectedBranches.includes(branch);
+}

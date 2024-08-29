@@ -10,6 +10,8 @@ import { updateStatus } from "../../utils/helper.js";
 import { checkInternetConnection } from "../../utils/utils.js";
 
 export async function handleGitPush() {
+  protectBranch();
+
   try {
     const isConnected = await checkInternetConnection();
     if (!isConnected) {
