@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Daitzyx/simplify/compare/v1.2.0...v1.2.1) (2024-08-29)
+
+
+### Bug Fixes
+
+* add missing import for protectBranch function ([42e86b3](https://github.com/Daitzyx/simplify/commit/42e86b3fcb9d5705229ef3cc623068c0c381e1db))
+
 # [1.2.0](https://github.com/Daitzyx/simplify/compare/v1.1.0...v1.2.0) (2024-08-29)
 
 
