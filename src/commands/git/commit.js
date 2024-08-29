@@ -13,8 +13,11 @@ import {
 } from "../../prompts/gitPrompt.js";
 import { chooseCommitType } from "../../prompts/commitPrompt.js";
 import { updateStatus } from "../../utils/helper.js";
+import { protectBranch } from "../../config.js";
 
 export async function handleGitCommit() {
+  protectBranch();
+
   const commitChanges = await checkForUncommittedChanges();
   if (!commitChanges) {
     console.log(chalk.green("Nothing to commit!"));
