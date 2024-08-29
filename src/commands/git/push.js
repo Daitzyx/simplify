@@ -8,6 +8,7 @@ import {
 import { executingPull } from "./pull.js";
 import { updateStatus } from "../../utils/helper.js";
 import { checkInternetConnection } from "../../utils/utils.js";
+import { protectBranch } from "../../config.js";
 
 export async function handleGitPush() {
   protectBranch();
