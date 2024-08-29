@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Daitzyx/simplify/compare/v1.1.0...v1.2.0) (2024-08-29)
+
+
+### Features
+
+* adding setup config and branches protection ([f492a28](https://github.com/Daitzyx/simplify/commit/f492a28990396b2683c4a38a9fc2c986d31ef700))
+
 # [1.1.0](https://github.com/Daitzyx/simplify/compare/v1.0.1...v1.1.0) (2024-08-09)
 
 
