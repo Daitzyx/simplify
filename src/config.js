@@ -6,24 +6,35 @@ function loadConfig() {
   const configPath = path.resolve(process.cwd(), 'simplify.config.json');
 
   if (fs.existsSync(configPath)) {
-    const configData = fs.readFileSync(configPath, 'utf-8');
+    const configData = fs.readFileSync(configPath, 'utf-8').trim();
+
+    if (configData === '' || configData === '{}') {
+      return {
+        branchProtection: {
+          enabled: false,
+          protectedBranches: [],
+        },
+      };
+    }
+
     return JSON.parse(configData);
-  } else {
-    return {
-      protectedBranches: {
-        branches: [],
-        requirePullRequest: false
-      }
-    };
   }
+
+  return {
+    branchProtection: {
+      enabled: false,
+      protectedBranches: [],
+    },
+  };
 }
+
 
 export function protectBranch() {
   const config = loadConfig();
   const currentBranch = getCurrentBranch();
 
-  if (checkBranchProtection(currentBranch, config.protectedBranches.branches)) {
-    if (config.protectedBranches) {
+  if (config.branchProtection.enabled) {
+    if (checkBranchProtection(currentBranch, config.branchProtection.protectedBranches.branches)) {
       console.error(`Branch "${currentBranch}" is protected. Direct commits are not allowed.`);
       process.exit(1);
     }
