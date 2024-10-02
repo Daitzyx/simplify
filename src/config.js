@@ -10,8 +10,8 @@ function loadConfig() {
     return JSON.parse(configData);
   } else {
     return {
-      branchProtection: {
-        protectedBranches: [],
+      protectedBranches: {
+        branches: [],
         requirePullRequest: false
       }
     };
