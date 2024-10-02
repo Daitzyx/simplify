@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Daitzyx/simplify/compare/v1.2.2...v1.3.0) (2024-10-02)
+
+
+### Features
+
+* implementing possibility to enable or not the branchProtection ([222fc17](https://github.com/Daitzyx/simplify/commit/222fc176ddea0603e3355209e28124f4ebb14c62))
+
 ## [1.2.2](https://github.com/Daitzyx/simplify/compare/v1.2.1...v1.2.2) (2024-10-02)
 
 
