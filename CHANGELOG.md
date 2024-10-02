@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/Daitzyx/simplify/compare/v1.2.1...v1.2.2) (2024-10-02)
+
+
+### Bug Fixes
+
+* ensure default config has correct structure for branch protection ([e1320ea](https://github.com/Daitzyx/simplify/commit/e1320ea1f509d83692dc4d988df5bf7a5b5ad3f5))
+
 ## [1.2.1](https://github.com/Daitzyx/simplify/compare/v1.2.0...v1.2.1) (2024-08-29)
 
 
