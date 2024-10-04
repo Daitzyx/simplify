@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Daitzyx/simplify/compare/v1.3.0...v1.4.0) (2024-10-04)
+
+
+### Features
+
+* adding possibility to config own commit types ([5ec765f](https://github.com/Daitzyx/simplify/commit/5ec765f9d86ae7a1ab54669fa5bf108df628158a))
+
 # [1.3.0](https://github.com/Daitzyx/simplify/compare/v1.2.2...v1.3.0) (2024-10-02)
 
 
