@@ -1,15 +1,9 @@
 import inquirer from "inquirer";
-
-const commitTypes = [
-  { name: "Refactor", value: "refactor" },
-  { name: "Feature", value: "feat" },
-  { name: "Fix", value: "fix" },
-  { name: "Style", value: "style" },
-  { name: "Chore", value: "chore" },
-  { name: "Test", value: "test" },
-];
+import { getCommitTypes } from "../utils/configManager.js";
 
 export async function chooseCommitType() {
+  const commitTypes = getCommitTypes();
+
   return await inquirer.prompt([
     {
       type: "list",

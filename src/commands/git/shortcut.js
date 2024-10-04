@@ -1,3 +1,4 @@
+import { removeCommitType, setCommitType } from "../../utils/configManager.js";
 import { validateEnvironment } from "../../validation/gitvalidation.js";
 import { handleGitSwitchBranch } from "./branch.js";
 import { handleGitCommit } from "./commit.js";
@@ -69,5 +70,19 @@ export function setupGitShortcuts(program) {
       } else {
         handleGitConfig();
       }
+    });
+
+  program
+    .command("set <type> <prefix>")
+    .description("Configure your commit types with a prefix")
+    .action((type, prefix) => {
+      setCommitType(type, prefix);
+    });
+
+  program
+    .command("remove <type>")
+    .description("Remove your commit types")
+    .action((type) => {
+      removeCommitType(type);
     });
 }
